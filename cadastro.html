@@ -1,0 +1,572 @@
+<!-- Declaração do tipo de documento e idioma -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Configuração de caracteres para compatibilidade -->
+    <meta charset="UTF-8">
+    <!-- Configuração da viewport para responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descrição da página para SEO -->
+    <meta name="description" content="Cadastre-se como voluntário na ONG Amigo Animal e ajude a cuidar de animais necessitados">
+    <!-- Palavras-chave para SEO -->
+    <meta name="keywords" content="cadastro voluntário, ONG animais, voluntariado animal, inscrição">
+    <!-- Título da página -->
+    <title>Cadastro de Voluntário - ONG Amigo Animal</title>
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Cabeçalho Principal -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Amigo Animal</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Nossos Animais</a></li>
+                <li><a href="cadastro.html">Seja Voluntário</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção de Introdução ao Cadastro -->
+        <section class="intro-cadastro">
+            <h2>Seja um Voluntário Amigo Animal</h2>
+            <img src="images/volunteers.jpg" alt="Voluntários cuidando de animais">
+            <p>
+                Seja bem-vindo! Estamos muito felizes com seu interesse em se tornar um voluntário 
+                da ONG Amigo Animal. Preencha o formulário abaixo com suas informações e 
+                nossa equipe entrará em contato para dar continuidade ao processo.
+            </p>
+            <p>
+                Todos os campos marcados com asterisco (*) são obrigatórios. Suas informações serão 
+                tratadas com confidencialidade conforme nossa Política de Privacidade.
+            </p>
+        </section>
+
+        <!-- Seção do Formulário -->
+        <section class="formulario-cadastro">
+            <h2>Formulário de Inscrição para Voluntariado</h2>
+            
+            <!-- Formulário principal de cadastro de voluntários -->
+            <form id="form-voluntario" action="#" method="post" novalidate>
+                <!-- Agrupamento de campos para Dados Pessoais -->
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    
+                    <div class="form-group">
+                        <label for="nome-completo">Nome Completo *</label>
+                        <input 
+                            type="text" 
+                            id="nome-completo" 
+                            name="nome-completo" 
+                            placeholder="Digite seu nome completo"
+                            required 
+                            minlength="3"
+                            maxlength="100"
+                            pattern="[A-Za-zÀ-ÿ\s]+"
+                            title="Digite seu nome completo (apenas letras e espaços)"
+                        >
+                        <span class="error-message" id="erro-nome"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cpf">CPF *</label>
+                            <input 
+                                type="text" 
+                                id="cpf" 
+                                name="cpf" 
+                                placeholder="000.000.000-00"
+                                required
+                                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                                maxlength="14"
+                                title="Digite um CPF válido no formato 000.000.000-00"
+                            >
+                            <span class="error-message" id="erro-cpf"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="data-nascimento">Data de Nascimento *</label>
+                            <input 
+                                type="date" 
+                                id="data-nascimento" 
+                                name="data-nascimento" 
+                                required
+                                min="1924-01-01"
+                                max="2009-12-31"
+                                title="Você deve ter entre 16 e 100 anos"
+                            >
+                            <span class="error-message" id="erro-data"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genero">Gênero *</label>
+                        <select id="genero" name="genero" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="nao-binario">Não-binário</option>
+                            <option value="prefiro-nao-informar">Prefiro não informar</option>
+                        </select>
+                        <span class="error-message" id="erro-genero"></span>
+                    </div>
+                </fieldset>
+
+                <!-- Agrupamento de campos para Informações de Contato -->
+                <fieldset>
+                    <legend>Informações de Contato</legend>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="seuemail@exemplo.com"
+                                required
+                                maxlength="100"
+                                title="Digite um e-mail válido"
+                            >
+                            <span class="error-message" id="erro-email"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmar-email">Confirmar E-mail *</label>
+                            <input 
+                                type="email" 
+                                id="confirmar-email" 
+                                name="confirmar-email" 
+                                placeholder="Confirme seu e-mail"
+                                required
+                                maxlength="100"
+                                title="Os e-mails devem ser iguais"
+                            >
+                            <span class="error-message" id="erro-confirmar-email"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefone">Telefone *</label>
+                            <input 
+                                type="tel" 
+                                id="telefone" 
+                                name="telefone" 
+                                placeholder="(00) 0000-0000"
+                                required
+                                pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+                                maxlength="15"
+                                title="Digite um telefone válido no formato (00) 00000-0000"
+                            >
+                            <span class="error-message" id="erro-telefone"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp</label>
+                            <input 
+                                type="tel" 
+                                id="whatsapp" 
+                                name="whatsapp" 
+                                placeholder="(00) 00000-0000"
+                                pattern="\(\d{2}\)\s\d{5}-\d{4}"
+                                maxlength="15"
+                                title="Digite um WhatsApp válido no formato (00) 00000-0000"
+                            >
+                            <span class="error-message" id="erro-whatsapp"></span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Agrupamento de campos para Endereço -->
+                <fieldset>
+                    <legend>Endereço</legend>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cep">CEP *</label>
+                            <input 
+                                type="text" 
+                                id="cep" 
+                                name="cep" 
+                                placeholder="00000-000"
+                                required
+                                pattern="\d{5}-\d{3}"
+                                maxlength="9"
+                                title="Digite um CEP válido no formato 00000-000"
+                            >
+                            <span class="error-message" id="erro-cep"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estado">Estado *</label>
+                            <select id="estado" name="estado" required>
+                                <option value="">Selecione</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                            <span class="error-message" id="erro-estado"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cidade">Cidade *</label>
+                        <input 
+                            type="text" 
+                            id="cidade" 
+                            name="cidade" 
+                            placeholder="Digite sua cidade"
+                            required
+                            minlength="2"
+                            maxlength="100"
+                            pattern="[A-Za-zÀ-ÿ\s]+"
+                            title="Digite o nome da cidade (apenas letras e espaços)"
+                        >
+                        <span class="error-message" id="erro-cidade"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="endereco">Endereço Completo *</label>
+                        <input 
+                            type="text" 
+                            id="endereco" 
+                            name="endereco" 
+                            placeholder="Rua, número, complemento"
+                            required
+                            minlength="5"
+                            maxlength="200"
+                            title="Digite seu endereço completo"
+                        >
+                        <span class="error-message" id="erro-endereco"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bairro">Bairro *</label>
+                            <input 
+                                type="text" 
+                                id="bairro" 
+                                name="bairro" 
+                                placeholder="Digite seu bairro"
+                                required
+                                minlength="2"
+                                maxlength="100"
+                                title="Digite o nome do bairro"
+                            >
+                            <span class="error-message" id="erro-bairro"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numero">Número *</label>
+                            <input 
+                                type="text" 
+                                id="numero" 
+                                name="numero" 
+                                placeholder="Nº"
+                                required
+                                maxlength="10"
+                                title="Digite o número do endereço"
+                            >
+                            <span class="error-message" id="erro-numero"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="complemento">Complemento</label>
+                        <input 
+                            type="text" 
+                            id="complemento" 
+                            name="complemento" 
+                            placeholder="Apartamento, bloco, etc. (opcional)"
+                            maxlength="100"
+                        >
+                    </div>
+                </fieldset>
+
+                <!-- Agrupamento de campos para Informações de Voluntariado -->
+                <fieldset>
+                    <legend>Informações de Voluntariado</legend>
+                    
+                    <div class="form-group">
+                        <label for="area-interesse">Área de Interesse *</label>
+                        <select id="area-interesse" name="area-interesse" required>
+                            <option value="">Selecione uma área</option>
+                            <option value="cuidado-animal">Cuidado Animal (alimentação, higiene, brincadeiras)</option>
+                            <option value="saude-animal">Saúde Animal (auxílio veterinário)</option>
+                            <option value="eventos-adocao">Eventos de Adoção e Arrecadação</option>
+                            <option value="comunicacao">Comunicação (fotos, vídeos, redes sociais)</option>
+                            <option value="administrativo">Apoio Administrativo</option>
+                            <option value="transporte">Transporte de Animais</option>
+                            <option value="lar-temporario">Lar Temporário</option>
+                        </select>
+                        <span class="error-message" id="erro-area"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experiencia">Experiência Anterior com Animais/Voluntariado *</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="experiencia" value="sim" required>
+                                Sim
+                            </label>
+                            <label>
+                                <input type="radio" name="experiencia" value="nao" required>
+                                Não
+                            </label>
+                        </div>
+                        <span class="error-message" id="erro-experiencia"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="disponibilidade">Disponibilidade Semanal *</label>
+                        <select id="disponibilidade" name="disponibilidade" required>
+                            <option value="">Selecione</option>
+                            <option value="2-horas">2 horas por semana</option>
+                            <option value="4-horas">4 horas por semana</option>
+                            <option value="8-horas">8 horas por semana</option>
+                            <option value="12-horas">12 horas ou mais por semana</option>
+                        </select>
+                        <span class="error-message" id="erro-disponibilidade"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="periodo">Período de Disponibilidade *</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="periodo" value="manha" required>
+                                Manhã
+                            </label>
+                            <label>
+                                <input type="checkbox" name="periodo" value="tarde">
+                                Tarde
+                            </label>
+                            <label>
+                                <input type="checkbox" name="periodo" value="noite">
+                                Noite
+                            </label>
+                            <label>
+                                <input type="checkbox" name="periodo" value="fim-semana">
+                                Fim de semana
+                            </label>
+                        </div>
+                        <span class="error-message" id="erro-periodo"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="habilidades">Habilidades e Qualificações Relevantes</label>
+                        <textarea 
+                            id="habilidades" 
+                            name="habilidades" 
+                            rows="5"
+                            placeholder="Descreva suas habilidades, como experiência com animais, cursos, etc."
+                            maxlength="1000"
+                        ></textarea>
+                        <small>Máximo de 1000 caracteres</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivacao">Por que deseja ser voluntário na Amigo Animal? *</label>
+                        <textarea 
+                            id="motivacao" 
+                            name="motivacao" 
+                            rows="5"
+                            placeholder="Conte-nos o que te motiva a ajudar os animais da ONG Amigo Animal"
+                            required
+                            minlength="50"
+                            maxlength="1000"
+                        ></textarea>
+                        <small>Mínimo de 50 caracteres, máximo de 1000</small>
+                        <span class="error-message" id="erro-motivacao"></span>
+                    </div>
+                </fieldset>
+
+                <!-- Agrupamento de campos para Informações Adicionais -->
+                <fieldset>
+                    <legend>Informações Adicionais</legend>
+                    
+                    <div class="form-group">
+                        <label for="como-conheceu">Como conheceu a ONG? *</label>
+                        <select id="como-conheceu" name="como-conheceu" required>
+                            <option value="">Selecione</option>
+                            <option value="redes-sociais">Redes Sociais</option>
+                            <option value="indicacao">Indicação de amigos/familiares</option>
+                            <option value="internet">Pesquisa na internet</option>
+                            <option value="evento">Evento de adoção ou palestra</option>
+                            <option value="midia">Mídia (TV, rádio, jornal)</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <span class="error-message" id="erro-conheceu"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="observacoes">Observações</label>
+                        <textarea 
+                            id="observacoes" 
+                            name="observacoes" 
+                            rows="4"
+                            placeholder="Alguma informação adicional que gostaria de compartilhar? (opcional)"
+                            maxlength="500"
+                        ></textarea>
+                        <small>Máximo de 500 caracteres</small>
+                    </div>
+                </fieldset>
+
+                <!-- Agrupamento de campos para Termos e Condições -->
+                <fieldset>
+                    <legend>Termos e Condições</legend>
+                    
+                    <div class="form-group checkbox-terms">
+                        <label>
+                            <input type="checkbox" name="aceite-termos" id="aceite-termos" required>
+                            Li e aceito os <a href="#" target="_blank">Termos de Uso</a> e a 
+                            <a href="#" target="_blank">Política de Privacidade</a> *
+                        </label>
+                        <span class="error-message" id="erro-termos"></span>
+                    </div>
+
+                    <div class="form-group checkbox-terms">
+                        <label>
+                            <input type="checkbox" name="aceite-comunicacao" id="aceite-comunicacao">
+                            Aceito receber comunicações da ONG por e-mail e WhatsApp
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Botões de Ação do Formulário -->
+                <div class="form-actions">
+                    <button type="reset" class="btn-secondary">Limpar Formulário</button>
+                    <button type="submit" class="btn-primary">Enviar Cadastro</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Seção de Informações Adicionais sobre o processo de voluntariado -->
+        <section class="info-adicional">
+            <h2>Próximos Passos</h2>
+            <article>
+                <h3>O que acontece depois do cadastro?</h3>
+                <ol>
+                    <li>
+                        <strong>Análise do Cadastro:</strong> Nossa equipe analisará suas informações 
+                        em até 5 dias úteis.
+                    </li>
+                    <li>
+                        <strong>Contato Inicial:</strong> Entraremos em contato por e-mail ou telefone 
+                        para agendar uma entrevista.
+                    </li>
+                    <li>
+                        <strong>Entrevista:</strong> Conversaremos sobre suas expectativas, habilidades 
+                        e disponibilidade para o voluntariado animal.
+                    </li>
+                    <li>
+                        <strong>Capacitação:</strong> Você participará de uma reunião de orientação 
+                        sobre nossos projetos e cuidados com os animais.
+                    </li>
+                    <li>
+                        <strong>Início das Atividades:</strong> Começará a atuar no projeto escolhido 
+                        conforme sua disponibilidade e perfil.
+                    </li>
+                </ol>
+            </article>
+
+            <article>
+                <h3>Dúvidas Frequentes</h3>
+                <dl>
+                    <dt>Preciso ter experiência prévia com animais?</dt>
+                    <dd>Não é necessário ter experiência anterior. Oferecemos capacitação para todos os voluntários.</dd>
+
+                    <dt>Qual é o tempo mínimo de comprometimento?</dt>
+                    <dd>Pedimos um comprometimento mínimo de 2 horas semanais por pelo menos 3 meses.</dd>
+
+                    <dt>Posso escolher os animais com quem vou interagir?</dt>
+                    <dd>Sim! Durante a entrevista, conversaremos sobre suas preferências e aptidões.</dd>
+
+                    <dt>Recebo algum tipo de remuneração?</dt>
+                    <dd>O voluntariado não é remunerado, mas oferecemos certificados, capacitações e muito amor animal em troca!</dd>
+
+                    <dt>Como funciona o certificado de voluntário?</dt>
+                    <dd>Emitimos certificados digitais após cada período de 6 meses de atuação comprovada.</dd>
+                </dl>
+            </article>
+
+            <article class="contato-cadastro">
+                <h3>Precisa de Ajuda?</h3>
+                <p>
+                    Se tiver dúvidas sobre o processo de cadastro ou sobre o voluntariado, 
+                    entre em contato conosco:
+                </p>
+                <ul>
+                    <li><strong>E-mail:</strong> voluntariado@amigoanimal.org.br</li>
+                    <li><strong>Telefone:</strong> (11) 2345-6789</li>
+                    <li><strong>WhatsApp:</strong> (11) 99876-5432</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>ONG Amigo Animal</h3>
+                <p>CNPJ: 98.765.432/0001-21</p>
+                <p>Certificado de Utilidade Pública Federal</p>
+                <p>&copy; 2025 Amigo Animal. Todos os direitos reservados.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Nossos Animais</a></li>
+                    <li><a href="cadastro.html">Seja Voluntário</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contato">
+                <h4>Contato</h4>
+                <p>Telefone: (11) 2345-6789</p>
+                <p>E-mail: contato@amigoanimal.org.br</p>
+                <p>Rua dos Bichinhos, 456 - São Paulo/SP</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inclusão dos scripts JavaScript para validação e máscaras -->
+    <script src="js/validacao.js"></script>
+    <script src="js/mascara.js"></script>
+</body>
+</html>
+

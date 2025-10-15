@@ -1,0 +1,733 @@
+/* Reset e Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definição de variáveis CSS para cores e estilos */
+:root {
+    --cor-primaria: #3498db; /* Azul vibrante para o tema animal */
+    --cor-secundaria: #f39c12; /* Laranja para destaque e energia */
+    --cor-destaque: #e74c3c; /* Vermelho para chamadas de atenção (adoção, urgência) */
+    --cor-texto: #34495e; /* Azul escuro para textos */
+    --cor-texto-claro: #7f8c8d; /* Cinza para textos secundários */
+    --cor-fundo: #ecf0f1; /* Cinza claro para o fundo */
+    --cor-fundo-claro: #ffffff; /* Branco para seções de conteúdo */
+    --cor-borda: #bdc3c7; /* Cinza para bordas */
+    --cor-erro: #c0392b; /* Vermelho para mensagens de erro */
+    --cor-sucesso: #27ae60; /* Verde para mensagens de sucesso */
+    --fonte-principal: 'Open Sans', sans-serif; /* Fonte moderna e legível */
+    --sombra-leve: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --transicao: all 0.3s ease; /* Transição suave para interações */
+}
+
+/* Estilos básicos para o corpo da página */
+body {
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    background-color: var(--cor-fundo);
+}
+
+/* Estilos para o cabeçalho e navegação */
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: var(--sombra-media);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicao);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Seção Hero: Estilos para o banner principal */
+.hero {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6); /* Escurece a imagem para melhor contraste do texto */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para botões */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--transicao);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #c0392b; /* Tom mais escuro do destaque */
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-media);
+}
+
+.btn-secondary {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto);
+    border: 2px solid var(--cor-borda);
+}
+
+.btn-secondary:hover {
+    background-color: var(--cor-borda);
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: var(--cor-secundaria);
+    border-radius: 2px;
+}
+
+article {
+    background-color: var(--cor-fundo-claro);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--sombra-leve);
+}
+
+article h3 {
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+article h4 {
+    font-size: 1.4rem;
+    color: var(--cor-secundaria);
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+article p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+article img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: var(--sombra-leve);
+}
+
+article ul,
+article ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+article li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para seções específicas */
+.sobre,
+.historico,
+.equipe,
+.transparencia {
+    background-color: var(--cor-fundo);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+}
+
+.conquistas ul,
+.numeros ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.conquistas li,
+.numeros li {
+    padding-left: 2rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.conquistas li::before,
+.numeros li::before {
+    content: '🐾'; /* Ícone de pata para a temática animal */
+    position: absolute;
+    left: 0;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.relatorios {
+    list-style: none;
+    margin-left: 0;
+}
+
+.relatorios li {
+    margin-bottom: 1rem;
+}
+
+.relatorios a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicao);
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 4px;
+}
+
+.relatorios a:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+/* Estilos para a seção de contato */
+.contato {
+    background-color: var(--cor-fundo);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+}
+
+address {
+    font-style: normal;
+    line-height: 2;
+}
+
+address a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+address a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociais ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-left: 0;
+    flex-wrap: wrap;
+}
+
+.redes-sociais li a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--cor-primaria);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: var(--transicao);
+}
+
+.redes-sociais li a:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+/* Estilos para a seção de projetos (agora "Nossos Animais") */
+.intro-projetos img,
+.intro-cadastro img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: var(--sombra-media);
+}
+
+.projeto {
+    border-left: 4px solid var(--cor-secundaria);
+    padding-left: 2rem;
+}
+
+.cta-voluntario,
+.cta-doacao {
+    text-align: center;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+}
+
+.cta-voluntario h3,
+.cta-doacao h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.cta-doacao p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para a seção de impacto (agora "Nosso Impacto em Números") */
+.numeros-impacto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    margin-left: 0;
+}
+
+.numeros-impacto li {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--cor-fundo-claro);
+    border-radius: 12px;
+    box-shadow: var(--sombra-leve);
+    transition: var(--transicao);
+}
+
+.numeros-impacto li:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+}
+
+.numeros-impacto li::before {
+    display: none;
+}
+
+.numeros-impacto strong {
+    display: block;
+    font-size: 3rem;
+    color: var(--cor-primaria);
+    margin-bottom: 0.5rem;
+}
+
+.numeros-impacto span {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--cor-texto-claro);
+}
+
+/* Estilos para o formulário de cadastro */
+.formulario-cadastro {
+    background-color: var(--cor-fundo-claro);
+    padding: 3rem;
+    border-radius: 12px;
+}
+
+form {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 2px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    padding: 0 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--cor-texto);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--cor-borda);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--fonte-principal);
+    transition: var(--transicao);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* Sombra com cor primária */
+}
+
+input.campo-invalido,
+select.campo-invalido,
+textarea.campo-invalido {
+    border-color: var(--cor-erro);
+}
+
+.error-message {
+    display: none;
+    color: var(--cor-erro);
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-group input,
+.checkbox-group input {
+    width: auto;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-terms {
+    display: flex;
+    align-items: flex-start;
+}
+
+.checkbox-terms label {
+    font-weight: normal;
+    display: flex;
+    align-items: flex-start;
+}
+
+.checkbox-terms input {
+    width: auto;
+    margin-right: 0.5rem;
+    margin-top: 0.3rem;
+    cursor: pointer;
+}
+
+.checkbox-terms a {
+    color: var(--cor-primaria);
+    font-weight: 600;
+}
+
+small {
+    display: block;
+    color: var(--cor-texto-claro);
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Estilos para informações adicionais (pós-cadastro) */
+.info-adicional {
+    background-color: var(--cor-fundo);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+}
+
+.info-adicional ol {
+    counter-reset: item;
+    list-style: none;
+    margin-left: 0;
+}
+
+.info-adicional ol li {
+    counter-increment: item;
+    margin-bottom: 1.5rem;
+    padding-left: 3rem;
+    position: relative;
+}
+
+.info-adicional ol li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--cor-primaria);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.info-adicional dl {
+    margin-top: 1rem;
+}
+
+.info-adicional dt {
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-adicional dd {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contato-cadastro {
+    background-color: var(--cor-fundo-claro);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--cor-destaque);
+}
+
+/* Rodapé da página */
+footer {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-info h3,
+.footer-links h4,
+.footer-contato h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+.footer-links a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    article h3 {
+        font-size: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+    .numeros-impacto {
+        grid-template-columns: 1fr;
+    }
+
+    .redes-sociais ul {
+        flex-direction: column;
+    }
+}
+
+/* Acessibilidade: Redução de movimento para usuários com preferências */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Acessibilidade: Classe para esconder elementos visualmente, mas mantê-los para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Acessibilidade: Foco visível para navegação por teclado */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 2px;
+}
+
