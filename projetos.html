@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os projetos sociais da ONG Amigos dos Animais e saiba como ajudar">
+    <meta name="keywords" content="projetos sociais, voluntariado, doação, proteção animal">
+    <title>Projetos Sociais - ONG Amigos dos Animais</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Pular para o conteúdo principal</a>
+    
+    <header role="banner">
+        <nav role="navigation" aria-label="Navegação principal">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>🐾 Amigos dos Animais</h1>
+                </div>
+                <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-haspopup="true" aria-expanded="false">Sobre Nós</a>
+                        <ul class="submenu">
+                            <li><a href="index.html#missao">Missão e Valores</a></li>
+                            <li><a href="index.html#equipe">Nossa Equipe</a></li>
+                            <li><a href="index.html#historia">História</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="projetos.html" class="active" aria-current="page">Projetos</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="container">
+                <h2 id="page-title">Nossos Projetos Sociais</h2>
+                <p class="page-subtitle">Conheça as iniciativas que transformam a vida de centenas de animais</p>
+            </div>
+        </section>
+
+        <section class="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title" class="sr-only">Lista de Projetos</h2>
+                
+                <div class="filter-bar">
+                    <h3>Filtrar por categoria:</h3>
+                    <div class="filter-buttons" role="group" aria-label="Filtros de categoria">
+                        <button class="filter-btn active" data-filter="todos">Todos</button>
+                        <button class="filter-btn" data-filter="resgate">Resgate</button>
+                        <button class="filter-btn" data-filter="adocao">Adoção</button>
+                        <button class="filter-btn" data-filter="educacao">Educação</button>
+                        <button class="filter-btn" data-filter="saude">Saúde</button>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card" data-category="resgate">
+                        <div class="project-image">
+                            <img src="images/projeto1.jpg" alt="Equipe de resgate atendendo animais em situação de risco">
+                            <span class="project-badge badge-resgate">Resgate</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Resgate de Emergência</h3>
+                            <p class="project-description">Equipe disponível 24 horas para resgatar animais em situação de risco, abandono ou maus-tratos. Atuamos em parceria com bombeiros e polícia ambiental.</p>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">450+</span>
+                                    <span class="stat-label">Resgates em 2024</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">98%</span>
+                                    <span class="stat-label">Taxa de recuperação</span>
+                                </div>
+                            </div>
+                            <div class="project-impact">
+                                <h4>Impacto do Projeto</h4>
+                                <ul>
+                                    <li>Salvamento de animais em situação crítica</li>
+                                    <li>Atendimento veterinário imediato</li>
+                                    <li>Reabilitação física e comportamental</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary btn-expand" aria-expanded="false">Saiba Mais</button>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="adocao">
+                        <div class="project-image">
+                            <img src="images/hero.jpg" alt="Evento de adoção com famílias conhecendo animais disponíveis">
+                            <span class="project-badge badge-adocao">Adoção</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Adoção Responsável</h3>
+                            <p class="project-description">Feiras de adoção mensais e programa de acompanhamento pós-adoção. Garantimos que cada animal encontre o lar perfeito através de entrevistas e visitas.</p>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">320</span>
+                                    <span class="stat-label">Adoções em 2024</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">95%</span>
+                                    <span class="stat-label">Sucesso pós-adoção</span>
+                                </div>
+                            </div>
+                            <div class="project-impact">
+                                <h4>Impacto do Projeto</h4>
+                                <ul>
+                                    <li>Famílias conectadas com seus novos membros</li>
+                                    <li>Acompanhamento durante período de adaptação</li>
+                                    <li>Suporte veterinário nos primeiros 30 dias</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary btn-expand" aria-expanded="false">Saiba Mais</button>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="educacao">
+                        <div class="project-image">
+                            <img src="images/projeto2.jpg" alt="Palestra educativa sobre posse responsável em escola">
+                            <span class="project-badge badge-educacao">Educação</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Educação para Posse Responsável</h3>
+                            <p class="project-description">Palestras em escolas, empresas e comunidades sobre cuidados com animais, prevenção de abandono e importância da castração.</p>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">85</span>
+                                    <span class="stat-label">Palestras realizadas</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">5.200+</span>
+                                    <span class="stat-label">Pessoas alcançadas</span>
+                                </div>
+                            </div>
+                            <div class="project-impact">
+                                <h4>Impacto do Projeto</h4>
+                                <ul>
+                                    <li>Conscientização sobre bem-estar animal</li>
+                                    <li>Redução de casos de abandono</li>
+                                    <li>Formação de multiplicadores da causa</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary btn-expand" aria-expanded="false">Saiba Mais</button>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="saude">
+                        <div class="project-image">
+                            <img src="images/projeto1.jpg" alt="Veterinária atendendo animal no programa de castração">
+                            <span class="project-badge badge-saude">Saúde</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Castração Solidária</h3>
+                            <p class="project-description">Programa de castração gratuita para animais de famílias de baixa renda e animais de rua, contribuindo para o controle populacional ético.</p>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">680</span>
+                                    <span class="stat-label">Castrações em 2024</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">100%</span>
+                                    <span class="stat-label">Gratuitas</span>
+                                </div>
+                            </div>
+                            <div class="project-impact">
+                                <h4>Impacto do Projeto</h4>
+                                <ul>
+                                    <li>Controle populacional humanitário</li>
+                                    <li>Prevenção de doenças</li>
+                                    <li>Melhoria da qualidade de vida animal</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary btn-expand" aria-expanded="false">Saiba Mais</button>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="resgate">
+                        <div class="project-image">
+                            <img src="images/hero.jpg" alt="Abrigo temporário com animais resgatados">
+                            <span class="project-badge badge-resgate">Resgate</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Abrigo Temporário</h3>
+                            <p class="project-description">Mantemos um abrigo com capacidade para 200 animais, oferecendo alimentação, cuidados veterinários e muito amor enquanto aguardam adoção.</p>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">180</span>
+                                    <span class="stat-label">Animais atualmente</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">45</span>
+                                    <span class="stat-label">Dias médios até adoção</span>
+                                </div>
+                            </div>
+                            <div class="project-impact">
+                                <h4>Impacto do Projeto</h4>
+                                <ul>
+                                    <li>Ambiente seguro e acolhedor</li>
+                                    <li>Alimentação balanceada diária</li>
+                                    <li>Socialização e treinamento básico</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary btn-expand" aria-expanded="false">Saiba Mais</button>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="educacao">
+                        <div class="project-image">
+                            <img src="images/projeto2.jpg" alt="Crianças participando de atividade educativa com animais">
+                            <span class="project-badge badge-educacao">Educação</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Projeto Amigo Fiel</h3>
+                            <p class="project-description">Programa educativo para crianças que ensina sobre respeito aos animais, responsabilidade e empatia através de atividades lúdicas.</p>
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">30</span>
+                                    <span class="stat-label">Escolas parceiras</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">3.500+</span>
+                                    <span class="stat-label">Crianças participantes</span>
+                                </div>
+                            </div>
+                            <div class="project-impact">
+                                <h4>Impacto do Projeto</h4>
+                                <ul>
+                                    <li>Formação de cidadãos conscientes</li>
+                                    <li>Desenvolvimento de empatia</li>
+                                    <li>Prevenção de maus-tratos futuros</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary btn-expand" aria-expanded="false">Saiba Mais</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="voluntariado" class="volunteer" aria-labelledby="volunteer-title">
+            <div class="container">
+                <h2 id="volunteer-title">Como Ser Voluntário</h2>
+                <p class="section-description">Existem diversas formas de contribuir com nosso trabalho. Escolha a que mais combina com você!</p>
+                
+                <div class="volunteer-grid">
+                    <article class="volunteer-card">
+                        <div class="volunteer-icon" aria-hidden="true">🏥</div>
+                        <h3>Cuidador de Animais</h3>
+                        <p>Ajude nos cuidados diários: alimentação, higiene, passeios e socialização dos animais do abrigo.</p>
+                        <ul class="requirements">
+                            <li>Disponibilidade mínima de 4h por semana</li>
+                            <li>Maior de 16 anos</li>
+                            <li>Treinamento fornecido pela ONG</li>
+                        </ul>
+                        <a href="cadastro.html" class="btn btn-secondary">Inscreva-se</a>
+                    </article>
+
+                    <article class="volunteer-card">
+                        <div class="volunteer-icon" aria-hidden="true">📸</div>
+                        <h3>Fotógrafo Voluntário</h3>
+                        <p>Registre momentos especiais, eventos e faça fotos dos animais para adoção.</p>
+                        <ul class="requirements">
+                            <li>Equipamento próprio</li>
+                            <li>Experiência em fotografia</li>
+                            <li>Disponibilidade para eventos</li>
+                        </ul>
+                        <a href="cadastro.html" class="btn btn-secondary">Inscreva-se</a>
+                    </article>
+
+                    <article class="volunteer-card">
+                        <div class="volunteer-icon" aria-hidden="true">🏠</div>
+                        <h3>Lar Temporário</h3>
+                        <p>Acolha temporariamente animais em recuperação ou filhotes até encontrarem um lar definitivo.</p>
+                        <ul class="requirements">
+                            <li>Residência adequada</li>
+                            <li>Experiência com animais</li>
+                            <li>Comprometimento com cuidados</li>
+                        </ul>
+                        <a href="cadastro.html" class="btn btn-secondary">Inscreva-se</a>
+                    </article>
+
+                    <article class="volunteer-card">
+                        <div class="volunteer-icon" aria-hidden="true">💼</div>
+                        <h3>Apoio Administrativo</h3>
+                        <p>Contribua com habilidades em gestão, comunicação, marketing ou áreas administrativas.</p>
+                        <ul class="requirements">
+                            <li>Formação ou experiência na área</li>
+                            <li>Trabalho remoto ou presencial</li>
+                            <li>Flexibilidade de horários</li>
+                        </ul>
+                        <a href="cadastro.html" class="btn btn-secondary">Inscreva-se</a>
+                    </article>
+
+                    <article class="volunteer-card">
+                        <div class="volunteer-icon" aria-hidden="true">🚗</div>
+                        <h3>Transporte</h3>
+                        <p>Auxilie no transporte de animais para consultas veterinárias, eventos e lares adotivos.</p>
+                        <ul class="requirements">
+                            <li>Veículo próprio</li>
+                            <li>Carteira de habilitação</li>
+                            <li>Disponibilidade pontual</li>
+                        </ul>
+                        <a href="cadastro.html" class="btn btn-secondary">Inscreva-se</a>
+                    </article>
+
+                    <article class="volunteer-card">
+                        <div class="volunteer-icon" aria-hidden="true">🎓</div>
+                        <h3>Educador</h3>
+                        <p>Ministre palestras e workshops sobre posse responsável em escolas e comunidades.</p>
+                        <ul class="requirements">
+                            <li>Facilidade de comunicação</li>
+                            <li>Conhecimento sobre bem-estar animal</li>
+                            <li>Treinamento fornecido</li>
+                        </ul>
+                        <a href="cadastro.html" class="btn btn-secondary">Inscreva-se</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="doar" class="donation" aria-labelledby="donation-title">
+            <div class="container">
+                <h2 id="donation-title">Como Doar</h2>
+                <p class="section-description">Sua doação faz toda a diferença na vida dos animais que resgatamos</p>
+                
+                <div class="donation-options">
+                    <article class="donation-card">
+                        <h3>Doação Financeira</h3>
+                        <p>Contribua com qualquer valor para ajudar nas despesas do abrigo</p>
+                        <div class="donation-methods">
+                            <h4>Formas de Pagamento:</h4>
+                            <ul>
+                                <li><strong>PIX:</strong> 12.345.678/0001-90</li>
+                                <li><strong>Transferência Bancária:</strong><br>
+                                    Banco do Brasil<br>
+                                    Agência: 1234-5<br>
+                                    Conta Corrente: 67890-1</li>
+                                <li><strong>Doação Recorrente:</strong> Configure débito automático mensal</li>
+                            </ul>
+                        </div>
+                        <div class="donation-impact">
+                            <h4>Impacto da sua doação:</h4>
+                            <ul>
+                                <li>R$ 50 - Alimentação para 5 animais por 1 semana</li>
+                                <li>R$ 100 - Vacinas para 2 animais</li>
+                                <li>R$ 200 - Castração de 1 animal</li>
+                                <li>R$ 500 - Tratamento veterinário completo</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="donation-card">
+                        <h3>Doação de Materiais</h3>
+                        <p>Aceitamos doações de itens essenciais para o cuidado dos animais</p>
+                        <div class="donation-items">
+                            <h4>Itens mais necessários:</h4>
+                            <div class="items-grid">
+                                <div class="item-category">
+                                    <h5>Alimentação</h5>
+                                    <ul>
+                                        <li>Ração para cães e gatos</li>
+                                        <li>Petiscos</li>
+                                        <li>Suplementos vitamínicos</li>
+                                    </ul>
+                                </div>
+                                <div class="item-category">
+                                    <h5>Higiene</h5>
+                                    <ul>
+                                        <li>Produtos de limpeza</li>
+                                        <li>Shampoo pet</li>
+                                        <li>Tapetes higiênicos</li>
+                                    </ul>
+                                </div>
+                                <div class="item-category">
+                                    <h5>Conforto</h5>
+                                    <ul>
+                                        <li>Cobertores e mantas</li>
+                                        <li>Camas e almofadas</li>
+                                        <li>Casinhas</li>
+                                    </ul>
+                                </div>
+                                <div class="item-category">
+                                    <h5>Acessórios</h5>
+                                    <ul>
+                                        <li>Coleiras e guias</li>
+                                        <li>Comedouros e bebedouros</li>
+                                        <li>Brinquedos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="donation-note"><strong>Endereço para entrega:</strong><br>
+                        Rua dos Animais, 123 - Centro, São Paulo - SP<br>
+                        Horário: Segunda a Sexta, 9h às 18h</p>
+                    </article>
+
+                    <article class="donation-card">
+                        <h3>Apadrinhamento</h3>
+                        <p>Apadrinhe um animal e acompanhe sua jornada até a adoção</p>
+                        <div class="sponsorship-info">
+                            <h4>Como funciona:</h4>
+                            <ol>
+                                <li>Escolha um animal para apadrinhar</li>
+                                <li>Contribua mensalmente com valor de sua escolha</li>
+                                <li>Receba atualizações sobre seu afilhado</li>
+                                <li>Visite quando quiser</li>
+                                <li>Tenha prioridade na adoção</li>
+                            </ol>
+                            <p class="sponsorship-benefit">Valor sugerido: R$ 80/mês por animal</p>
+                        </div>
+                        <a href="cadastro.html" class="btn btn-primary">Quero Apadrinhar</a>
+                    </article>
+                </div>
+
+                <div class="transparency">
+                    <h3>Transparência nas Doações</h3>
+                    <p>Todos os recursos recebidos são aplicados diretamente no cuidado dos animais. Publicamos relatórios mensais de receitas e despesas.</p>
+                    <div class="transparency-links">
+                        <a href="#" class="btn btn-outline">Ver Relatórios Financeiros</a>
+                        <a href="#" class="btn btn-outline">Prestação de Contas 2024</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre a ONG</h3>
+                <p>A ONG Amigos dos Animais é uma organização sem fins lucrativos dedicada ao resgate, cuidado e adoção responsável de animais abandonados.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Transparência</h3>
+                <ul>
+                    <li><a href="#relatorios">Relatórios Anuais</a></li>
+                    <li><a href="#prestacao">Prestação de Contas</a></li>
+                    <li><a href="#documentos">Documentos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Receba novidades sobre nossos projetos</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail" aria-label="E-mail para newsletter">
+                    <button type="submit" class="btn btn-small">Inscrever</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 ONG Amigos dos Animais. Todos os direitos reservados.</p>
+            <p>CNPJ: 12.345.678/0001-90</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/filters.js"></script>
+</body>
+</html>
+
