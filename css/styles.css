@@ -265,6 +265,40 @@ header {
     padding: var(--spacing-xs);
 }
 
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text-primary);
+    margin: 3px 0;
+    transition: var(--transition-base);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-medium);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    transition: var(--transition-fast);
+    text-decoration: none;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--color-primary-100);
+    color: var(--color-primary-700);
+    text-decoration: none;
+}
 
 .dropdown .submenu {
     display: none;
